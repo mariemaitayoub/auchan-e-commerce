@@ -21,8 +21,8 @@
 
 
 
-            <input type="search"
-                class=" flex-grow max-w-2xl mx-8 w-full border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+            <input type="serach"
+               id="filtree" class=" flex-grow max-w-2xl mx-8 w-full border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
                 placeholder="Rechercher un produit par nom">
 
 
@@ -31,10 +31,10 @@
 
             <ul class="flex items-center gap-8 ">
 
-                <li>
-                    <a href="#" class="text-sm font-medium text-gray-700 hover:text-black hover:underline">Catalogue</a>
+                <!-- <li>
+                    <a href="#" class="text-sm font-medium text-gray-700 hover:text-black hover:underline"></a>
 
-                </li>
+                </li> -->
                 <li>
                     <a href="#" class="text-sm font-medium text-gray-700 hover:text-black hover:underline">Admin</a>
 
@@ -49,7 +49,7 @@
 
     </header>
     <main class="bg-white  py-[30px] px-8">
-        <div class="h-[500px] w-full  bg-[url(./img/img01.png)] bg-cover rounded-xl shadow-lg ">
+        <!-- <div class="h-[500px] w-full  bg-[url(./img/img01.png)] bg-cover rounded-xl shadow-lg ">
             <span class="top-10 left-10 text-white text-3xl font-bold  px-8 py-3 rounded-lg">Tout ce que vous aimez, au
                 même endroit.</span>
             <p class="text-white text-xl px-6  ">Des essentiels du quotidien aux coups de cœur du moment. Bons produits,
@@ -57,12 +57,19 @@
             <button
                 class="bg-red-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">Découvrir
                 la sélection -></button>
-        </div>
+        </div> -->
         <div class="py-[30px] px-8 flex flex-col ">
             <span class="font-bold text-[#559529] font-['DM_Sans'] ">Notre sélection</span>
             <h2 class="font-bold text-[#0F172B] text-3xl ">Les essentiels du moment</h2>
             <p class="text-sm text-[#90A1B9]">12 produits soigneusement sélectionnés</p>
         </div>
+
+       <div class="catalogue flex flex-wrap gap-2 pb-6">
+<button class="rounded-full bg-green-950 px-5 py-2 text-sm font-medium text-white shadow ">tout</button>
+<button class="rounded-full bg-gray-100 px-5 py-2 text-sm font-medium text-gray-600 shadow hover:bg-gray-100">Électronique</button>
+<button class="rounded-full bg-gray-100 px-5 py-2 text-sm font-medium text-gray-600 shadow hover:bg-gray-100">Mode</button>
+<button class="rounded-full bg-gray-100 px-5 py-2 text-sm font-medium text-gray-600 shadow hover:bg-gray-100">Maison</button>
+       </div>
         
             <div id="products" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-6 p-4 shadow-xl rounded-2xl">
             </div>
@@ -97,4 +104,4 @@
 
 </body>
 
-</html>
+</html> 
