@@ -18,7 +18,7 @@
             <ul class="flex items-center gap-8 ">
                 <li><button id='ouvrir' class="text-sm font-medium text-gray-700 hover:text-black hover:underline">Contact</button></li>
                 <li><a href="#" class="text-sm font-medium text-gray-700 hover:text-black hover:underline">admin</a></li>
-                <li><button class="panier bg-red-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">MonPanier</button></li></ul></nav>
+                <li><button id="panier" class=" bg-red-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">MonPanier</button></li></ul></nav>
     </header>
     <main class="bg-white  py-[30px] px-8">
         <!-- <div class="h-[500px] w-full  bg-[url(./img/img01.png)] bg-cover rounded-xl shadow-lg ">
@@ -51,7 +51,7 @@
 
 
         </div>
-//popup dyal contact ba9i liya css 
+<!-- popup dyal contact ba9i liya css  -->
 <dialog id="contact" class="border rounded-2xl p-20 shadow  backdrop:bg-black/50">
     <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow">
 <h1 class="text-3xl font-bold mb-6 text-centre">Contactez-nous</h1>
@@ -67,14 +67,14 @@
 
 <button type="submit" id="submit">Envoyer mon message</button>
 <button type="" id="fermer">fermer</button>
-//poppup dyal mon panier 
-<dialog id="pan">
-    <h2>Mon Panier</h2>
-    <button id="close"> fermer </button>
-
-</dialog>
 
 </form>
+</dialog>
+<!-- poppup dyal mon panier  -->
+<dialog id="pan" class="border rounded-2xl p-20 shadow  backdrop:bg-black/5">
+    <h2 class="text-3xl font-bold mb-6 text-centre">Mon Panier</h2>
+    <button id="close"> fermer </button>
+
 </dialog>
  </main>
     <footer class="bg-red-600 text-white py-10 mt-auto">
@@ -85,24 +85,26 @@
         </div>
     </footer>
     <script>
-const panier=document.querySelector(".panier")
-const close=document.querySelector("#close")
-const pan=document.querySelector("#pan") 
+const panier=document.querySelector("#panier");
+const close=document.querySelector("#close");
+const pan=document.querySelector("#pan") ;
 
 
 
 panier.addEventListener("click", () =>
 {
     pan.showModal();
+    
+});
+close.addEventListener("click",()=>
+{
+    pan.close();
 })
-// const open =document 
 
-
-
-const a=document.querySelector("#ouvrir")
-const b=document.querySelector("#submit")
-const c=document.querySelector("#contact")
-const fermer=document.querySelector("#fermer")
+const a=document.querySelector("#ouvrir");
+const b=document.querySelector("#submit");
+const c=document.querySelector("#contact");
+const fermer=document.querySelector("#fermer");
 
 
 
