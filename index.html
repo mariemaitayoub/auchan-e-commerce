@@ -8,45 +8,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/png" href="img/Auchan-Logo.png">
 </head>
-
-
 <body class="bg-white font-sans">
     <header class="border rounded-2xl border-gray-200 h-20 ">
         <nav aria-label="navigation principale " class="flex justify-between items-center py-5 px-8 ">
-
-
-
-
             <img src="img/Auchan-Logo.png" alt="logo" class="h-8">
-
-
-
             <input type="serach"
                id="filtree" class=" flex-grow max-w-2xl mx-8 w-full border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
                 placeholder="Rechercher un produit par nom">
-
-
-
-
-
             <ul class="flex items-center gap-8 ">
-
-                <!-- <li>
-                    <a href="#" class="text-sm font-medium text-gray-700 hover:text-black hover:underline"></a>
-
-                </li> -->
-                <li>
-                    <a href="#" class="text-sm font-medium text-gray-700 hover:text-black hover:underline">Admin</a>
-
-                </li>
-                <li>
-                    <button
-                        class="bg-red-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">Mon
-                        Panier</button>
-                </li>
-            </ul>
-        </nav>
-
+                <li><button id='ouvrir' class="text-sm font-medium text-gray-700 hover:text-black hover:underline">Contact</button></li>
+                <li><a href="#" class="text-sm font-medium text-gray-700 hover:text-black hover:underline">admin</a></li>
+                <li><button class="panier bg-red-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">MonPanier</button></li></ul></nav>
     </header>
     <main class="bg-white  py-[30px] px-8">
         <!-- <div class="h-[500px] w-full  bg-[url(./img/img01.png)] bg-cover rounded-xl shadow-lg ">
@@ -79,13 +51,32 @@
 
 
         </div>
+//popup dyal contact ba9i liya css 
+<dialog id="contact" class="border rounded-2xl p-20 shadow  backdrop:bg-black/50">
+    <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow">
+<h1 class="text-3xl font-bold mb-6 text-centre">Contactez-nous</h1>
+<form class="space-y-4">
+    <label for="">Prénom</label>
+<input type="text" placeholder="Votre nom">
+    <label for="">Nom</label>
+<input type="email" placeholder="Votr email">
+    <label for="">E-mail</label>
+<input type="email" placeholder="Votr email">
+    <label for="">Téléphone</label>
+<input type='tel' placeholder="Votre message">
 
+<button type="submit" id="submit">Envoyer mon message</button>
+<button type="" id="fermer">fermer</button>
+//poppup dyal mon panier 
+<dialog id="pan">
+    <h2>Mon Panier</h2>
+    <button id="close"> fermer </button>
 
+</dialog>
 
-
-
-    </main>
-
+</form>
+</dialog>
+ </main>
     <footer class="bg-red-600 text-white py-10 mt-auto">
         <div class="max-w-7xl mx-auto px-8 ">
             <div class="text-center text-sm text-slate-500 mt-10 border-t border-slate-700 pt-6 ">
@@ -93,6 +84,48 @@
             </div>
         </div>
     </footer>
+    <script>
+const panier=document.querySelector(".panier")
+const close=document.querySelector("#close")
+const pan=document.querySelector("#pan") 
+
+
+
+panier.addEventListener("click", () =>
+{
+    pan.showModal();
+})
+// const open =document 
+
+
+
+const a=document.querySelector("#ouvrir")
+const b=document.querySelector("#submit")
+const c=document.querySelector("#contact")
+const fermer=document.querySelector("#fermer")
+
+
+
+
+
+
+
+a.addEventListener("click",()=>
+{
+    c.showModal();
+
+})
+b.addEventListener("click",()=>
+{
+    c.closeModal();
+})
+fermer.addEventListener("click",()=>
+{
+    c.close();
+})
+
+
+    </script>
     <script src="./js/main.js" type="module"></script>
     <script src="./js/api.js" type="module"></script>
     <script src="./js/cart.js" type="module"></script>
@@ -100,7 +133,7 @@
     <script src="./js/storage.js" type="module"></script>
     <script src="./js/ui.js" type="module"></script>
     <script src="./js/validation.js" type="module"></script>
-        <script src="./js/products.js" type="module"></script>
+    <script src="./js/products.js" type="module"></script>
 
 </body>
 
