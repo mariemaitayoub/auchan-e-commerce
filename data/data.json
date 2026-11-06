@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "name": "T-shirt coton blanc",
+    "category": "Vêtements",
+    "price": 89,
+    "image": "https://loremflickr.com/400/400/tshirt?lock=1",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "description": "Coupe regular en coton 100% bio.",
+    "stock": 12,
+    "rating": 4
+  },
+  {
+    "id": 2,
+    "name": "Jean slim bleu",
+    "category": "Vêtements",
+    "price": 249,
+    "image": "https://loremflickr.com/400/400/jeans?lock=2",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "description": "Jean stretch confortable, coupe slim.",
+    "stock": 19,
+    "rating": 4.5
+  },
+  {
+    "id": 3,
+    "name": "Sweat à capuche gris",
+    "category": "Vêtements",
+    "price": 199,
+    "image": "https://loremflickr.com/400/400/hoodie?lock=3",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "description": "Molleton épais avec poche kangourou.",
+    "stock": 6,
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "name": "Veste légère coupe-vent",
+    "category": "Vêtements",
+    "price": 329,
+    "image": "https://loremflickr.com/400/400/jacket?lock=4",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "description": "Veste déperlante, idéale mi-saison.",
+    "stock": 13,
+    "rating": 3.5
+  },
+  {
+    "id": 5,
+    "name": "Robe d'été fleurie",
+    "category": "Vêtements",
+    "price": 219,
+    "image": "https://loremflickr.com/400/400/dress?lock=5",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "description": "Robe légère à motifs floraux.",
+    "stock": 20,
+    "rating": 4
+  },
+  {
+    "id": 6,
+    "name": "Chemise en lin beige",
+    "category": "Vêtements",
+    "price": 179,
+    "image": "https://loremflickr.com/400/400/shirt?lock=6",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "description": "Chemise respirante pour l'été.",
+    "stock": 7,
+    "rating": 4.5
+  },
+  {
+    "id": 7,
+    "name": "Pull en maille marine",
+    "category": "Vêtements",
+    "price": 229,
+    "image": "https://loremflickr.com/400/400/sweater?lock=7",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "description": "Pull col rond doux et chaud.",
+    "stock": 14,
+    "rating": 5
+  },
+  {
+    "id": 8,
+    "name": "Baskets blanches",
+    "category": "Vêtements",
+    "price": 399,
+    "image": "https://loremflickr.com/400/400/sneakers?lock=8",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "description": "Baskets décontractées, semelle confort.",
+    "stock": 21,
+    "rating": 3.5
+  },
+  {
+    "id": 9,
+    "name": "Smartphone 128 Go",
+    "category": "Électronique",
+    "price": 2499,
+    "image": "https://loremflickr.com/400/400/smartphone?lock=9",
+    "sizes": [],
+    "description": "Écran 6,5 pouces, double caméra.",
+    "stock": 8,
+    "rating": 4
+  },
+  {
+    "id": 10,
+    "name": "Écouteurs sans fil",
+    "category": "Électronique",
+    "price": 399,
+    "image": "https://loremflickr.com/400/400/earbuds?lock=10",
+    "sizes": [],
+    "description": "Bluetooth 5.3, 24h d'autonomie.",
+    "stock": 15,
+    "rating": 4.5
+  },
+  {
+    "id": 11,
+    "name": "Montre connectée",
+    "category": "Électronique",
+    "price": 799,
+    "image": "https://loremflickr.com/400/400/smartwatch?lock=11",
+    "sizes": [],
+    "description": "Suivi d'activité et notifications.",
+    "stock": 22,
+    "rating": 5
+  },
+  {
+    "id": 12,
+    "name": "Enceinte Bluetooth portable",
+    "category": "Électronique",
+    "price": 449,
+    "image": "https://loremflickr.com/400/400/speaker?lock=12",
+    "sizes": [],
+    "description": "Son 360°, étanche IPX7.",
+    "stock": 9,
+    "rating": 3.5
+  },
+  {
+    "id": 13,
+    "name": "Tablette 10 pouces",
+    "category": "Électronique",
+    "price": 1799,
+    "image": "https://loremflickr.com/400/400/tablet?lock=13",
+    "sizes": [],
+    "description": "Écran HD, 64 Go de stockage.",
+    "stock": 16,
+    "rating": 4
+  },
+  {
+    "id": 14,
+    "name": "Clavier mécanique RGB",
+    "category": "Électronique",
+    "price": 549,
+    "image": "https://loremflickr.com/400/400/keyboard?lock=14",
+    "sizes": [],
+    "description": "Switchs rouges, rétroéclairage RGB.",
+    "stock": 23,
+    "rating": 4.5
+  },
+  {
+    "id": 15,
+    "name": "Lampe de bureau LED",
+    "category": "Maison",
+    "price": 129,
+    "image": "https://loremflickr.com/400/400/desklamp?lock=15",
+    "sizes": [],
+    "description": "Intensité réglable, port USB.",
+    "stock": 10,
+    "rating": 5
+  },
+  {
+    "id": 16,
+    "name": "Set de 6 tasses en céramique",
+    "category": "Maison",
+    "price": 149,
+    "image": "https://loremflickr.com/400/400/mug?lock=16",
+    "sizes": [],
+    "description": "Tasses empilables, passent au lave-vaisselle.",
+    "stock": 17,
+    "rating": 3.5
+  },
+  {
+    "id": 17,
+    "name": "Plaid en polaire",
+    "category": "Maison",
+    "price": 169,
+    "image": "https://loremflickr.com/400/400/blanket?lock=17",
+    "sizes": [],
+    "description": "Plaid doux 130 x 170 cm.",
+    "stock": 24,
+    "rating": 4
+  },
+  {
+    "id": 18,
+    "name": "Cafetière électrique",
+    "category": "Maison",
+    "price": 279,
+    "image": "https://loremflickr.com/400/400/coffeemaker?lock=18",
+    "sizes": [],
+    "description": "Programmable, arrêt automatique.",
+    "stock": 11,
+    "rating": 4.5
+  },
+  {
+    "id": 19,
+    "name": "Ballon de football",
+    "category": "Sport",
+    "price": 119,
+    "image": "https://loremflickr.com/400/400/soccerball?lock=19",
+    "sizes": [],
+    "description": "Taille 5, coutures renforcées.",
+    "stock": 18,
+    "rating": 5
+  },
+  {
+    "id": 20,
+    "name": "Tapis de yoga antidérapant",
+    "category": "Sport",
+    "price": 139,
+    "image": "https://loremflickr.com/400/400/yogamat?lock=20",
+    "sizes": [],
+    "description": "Épaisseur 6 mm, sac inclus.",
+    "stock": 5,
+    "rating": 3.5
+  }
+]

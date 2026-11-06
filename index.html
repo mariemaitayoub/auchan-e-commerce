@@ -1,11 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Auchan - Panier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="img/Auchan-Logo.png">
 </head>
-<body>
+<body class="bg-white font-sans">
+    <header class="border rounded-2xl border-gray-200 h-20 ">
+        <nav aria-label="navigation principale " class="flex justify-between items-center py-5 px-8 ">
+            <img src="img/Auchan-Logo.png" alt="logo" class="h-8">
+            <input type="serach"
+               id="filtree" class=" flex-grow max-w-2xl mx-8 w-full border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600"
+                placeholder="Rechercher un produit par nom">
+            <ul class="flex items-center gap-8 ">
+                <li><button id='ouvrir' class="text-sm font-medium text-gray-700 hover:text-black hover:underline">Contact</button></li>
+                <li><a href="#" class="text-sm font-medium text-gray-700 hover:text-black hover:underline">admin</a></li>
+                <li><button id="panier" class=" bg-red-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">MonPanier</button></li></ul></nav>
+    </header>
+    <main class="bg-white  py-[30px] px-8">
+        <!-- <div class="h-[500px] w-full  bg-[url(./img/img01.png)] bg-cover rounded-xl shadow-lg ">
+            <span class="top-10 left-10 text-white text-3xl font-bold  px-8 py-3 rounded-lg">Tout ce que vous aimez, au
+                même endroit.</span>
+            <p class="text-white text-xl px-6  ">Des essentiels du quotidien aux coups de cœur du moment. Bons produits,
+                bons prix, simplement.</p>
+            <button
+                class="bg-red-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">Découvrir
+                la sélection -></button>
+        </div> -->
+        <div class="py-[30px] px-8 flex flex-col ">
+            <span class="font-bold text-[#559529] font-['DM_Sans'] ">Notre sélection</span>
+            <h2 class="font-bold text-[#0F172B] text-3xl ">Les essentiels du moment</h2>
+            <p class="text-sm text-[#90A1B9]">12 produits soigneusement sélectionnés</p>
+        </div>
+
+       <div class="catalogue flex flex-wrap gap-2 pb-6">
+<button class="rounded-full bg-green-950 px-5 py-2 text-sm font-medium text-white shadow ">tout</button>
+<button class="rounded-full bg-gray-100 px-5 py-2 text-sm font-medium text-gray-600 shadow hover:bg-gray-100">Électronique</button>
+<button class="rounded-full bg-gray-100 px-5 py-2 text-sm font-medium text-gray-600 shadow hover:bg-gray-100">Mode</button>
+<button class="rounded-full bg-gray-100 px-5 py-2 text-sm font-medium text-gray-600 shadow hover:bg-gray-100">Maison</button>
+       </div>
+        
+            <div id="products" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-6 p-4 shadow-xl rounded-2xl">
+            </div>
+<div id="pagination" class="flex justify-center items-center gap-3 p-4"></div>                    
+            
+
+
+
+        </div>
+<!-- popup dyal contact ba9i liya css  -->
+<dialog id="contact" class="border rounded-2xl p-20 shadow  backdrop:bg-black/50">
+    <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow">
+<h1 class="text-3xl font-bold mb-6 text-centre">Contactez-nous</h1>
+<form class="space-y-4">
+    <label for="">Prénom</label>
+<input type="text" placeholder="Votre nom">
+    <label for="">Nom</label>
+<input type="email" placeholder="Votr email">
+    <label for="">E-mail</label>
+<input type="email" placeholder="Votr email">
+    <label for="">Téléphone</label>
+<input type='tel' placeholder="Votre message">
+
+<button type="submit" id="submit">Envoyer mon message</button>
+<button type="" id="fermer">fermer</button>
+
+</form>
+</dialog>
+<!-- poppup dyal mon panier  -->
+<dialog id="pan" class="border rounded-2xl p-20 shadow  backdrop:bg-black/5">
+    <h2 class="text-3xl font-bold mb-6 text-centre">Mon Panier</h2>
+    <button id="close"> fermer </button>
+
+</dialog>
+ </main>
+    <footer class="bg-red-600 text-white py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-8 ">
+            <div class="text-center text-sm text-slate-500 mt-10 border-t border-slate-700 pt-6 ">
+                &copy; 2026 Auchan. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+    <script>
+const panier=document.querySelector("#panier");
+const close=document.querySelector("#close");
+const pan=document.querySelector("#pan") ;
+
+
+
+panier.addEventListener("click", () =>
+{
+    pan.showModal();
     
+});
+close.addEventListener("click",()=>
+{
+    pan.close();
+})
+
+const a=document.querySelector("#ouvrir");
+const b=document.querySelector("#submit");
+const c=document.querySelector("#contact");
+const fermer=document.querySelector("#fermer");
+
+
+
+
+
+
+
+a.addEventListener("click",()=>
+{
+    c.showModal();
+
+})
+b.addEventListener("click",()=>
+{
+    c.closeModal();
+})
+fermer.addEventListener("click",()=>
+{
+    c.close();
+})
+
+
+    </script>
+    <script src="./js/main.js" type="module"></script>
+    <script src="./js/api.js" type="module"></script>
+    <script src="./js/cart.js" type="module"></script>
+    <script src="./js/dragDrop.js" type="module"></script>
+    <script src="./js/storage.js" type="module"></script>
+    <script src="./js/ui.js" type="module"></script>
+    <script src="./js/validation.js" type="module"></script>
+    <script src="./js/products.js" type="module"></script>
+
 </body>
-</html>
+
+</html> 
