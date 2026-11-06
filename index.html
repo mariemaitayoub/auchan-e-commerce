@@ -17,7 +17,7 @@
                 placeholder="Rechercher un produit par nom">
             <ul class="flex items-center gap-8 ">
                 <li><button id='ouvrir' class="text-sm font-medium text-gray-700 hover:text-black hover:underline">Contact</button></li>
-                <li><a href="#" class="text-sm font-medium text-gray-700 hover:text-black hover:underline">admin</a></li>
+                <li><a href="admin.html" class="text-sm font-medium text-gray-700 hover:text-black hover:underline">admin</a></li>
                 <li><button id="panier" class=" bg-[#F59E0B] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition">MonPanier</button></li></ul></nav>
     </header>
     <main class="bg-white  py-[30px] px-8">
@@ -39,7 +39,7 @@
        <div class="catalogue flex flex-wrap gap-2 pb-6">
 <button class="rounded-full bg-[#1E3A8A] px-5 py-2 text-sm font-medium text-white shadow ">tout</button>
 <button class="rounded-full bg-white px-5 py-2 text-sm font-medium text-gray-600 shadow hover:bg-gray-100">Électronique</button>
-<button class="rounded-full bg-white px-5 py-2 text-sm font-medium text-gray-600 shadow hover:bg-gray-100">Mode</button>
+<button class="rounded-full bg-white px-5 py-2 text-sm font-medium text-gray-600 shadow hover:bg-gray-100">Vêtements</button>
 <button class="rounded-full bg-white px-5 py-2 text-sm font-medium text-gray-600 shadow hover:bg-gray-100">Maison</button>
        </div>
         
@@ -71,9 +71,17 @@
 </form>
 </dialog>
 <!-- poppup dyal mon panier  -->
-<dialog id="pan" class="border rounded-2xl p-20 shadow  backdrop:bg-black/5">
-    <h2 class="text-3xl font-bold mb-6 text-centre">Mon Panier</h2>
-    <button id="close"> fermer </button>
+<dialog id="pan" class="border rounded-2xl p-8 shadow  backdrop:bg-black/50 w-full max-w-md">
+    <h2 class="text-3xl font-bold mb-6 text-centre text-[#1E3A8A]">Mon Panier</h2>
+   <div id="cartItems" class="flex flex-col gap-4 mb-6 max-h-80 overflow-y-auto"></div>
+    
+   <div class="flex justify-between items-center border-t pt-4 mb-6">
+<span class="text-lg font-bold text-gray-700 ">total :</span>
+<span  class="text-2xl font-black text-[#F59E0B]"><span id="cartTotl">0.00</span></span>
+
+
+   </div>
+   <button id="close" class="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-bold hover:bg-gray-300 transitio"> fermer </button>
 
 </dialog>
  </main>
@@ -111,23 +119,24 @@ a.addEventListener("click",()=>
 b.addEventListener("click",(e)=>
 {
     e.preventDefault();
-    c.closeModal();
+    c.close();
 })
 fermer.addEventListener("click",()=>
 {
     c.close();
 })
+panier.addEventListener('click',()=>
+{
+    pan.showModal();
 
+});
+close.addEventListener('click',()=>
+{
+    pan.close();
+});
 
     </script>
     <script src="./js/main.js" type="module"></script>
-    <script src="./js/api.js" type="module"></script>
-    <script src="./js/cart.js" type="module"></script>
-    <script src="./js/dragDrop.js" type="module"></script>
-    <script src="./js/storage.js" type="module"></script>
-    <script src="./js/ui.js" type="module"></script>
-    <script src="./js/validation.js" type="module"></script>
-    <script src="./js/products.js" type="module"></script>
 
 </body>
 
