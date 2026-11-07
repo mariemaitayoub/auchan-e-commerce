@@ -1,6 +1,7 @@
 import { products } from "./storage.js";
+import { renderProducts } from "./ui.js";
 
-const limit = 6;
+const limit = 12;
 let current = 1;
 let data = [];
 let currentFiltre = '';
@@ -23,7 +24,7 @@ categorie.forEach(btn => {
     btn.addEventListener("click", (e) => {
         currentcategory = e.target.textContent.trim().toLowerCase();
         categorie.forEach(btn => {
-            btn.className = 'rounded-full bg-gray-600 px-5 py-2 text-sm font-meduim text-gray-600 shadow hover:bg-gray-100'
+            btn.className = 'rounded-full  px-5 py-2 text-sm font-meduim bg-white text-gray-600 shadow hover:bg-gray-100'
         });
         e.target.className = "rounded-full bg-[#1E3A8A] px-5 py-2 text-sm font-medium text-white shadow transition hover:bg-[#152960]";
         current = 1;
@@ -47,21 +48,9 @@ const filterd=data.filter(p=>{
 
     const start = (current - 1) * limit;
     const pageItem = filterd.slice(start, start + limit);
-    proElem.innerHTML = ``;
-    for (const p of pageItem) {
-        const div = document.createElement('div');
-div.className = 'product bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition duration-300 flex flex-col justify-between';
-        div.innerHTML = `
-    <img src='${p.image}' class="w-full h-48 object-cover">
-<div class="p-2 flex flex-col gap-3">
-<h3 class="text-lg font-bold text-gray-800 ">${p.name}</h3> 
-<span class="text-xl font-black text-[#F59E0B]">${p.price} DH</span>
-<button class="w-full bg-[#1E3A8A] text-white px-4 py-2 rounded-lg hover:bg-[#152960] font-bold transition mt-2 shadow-sm">Ajouter</button>
-</div>
-`;
-        proElem.appendChild(div)
-    }
+renderProducts(pageItem);
 
+   
 
     pag.innerHTML = '';
     const page = Math.ceil(filterd.length / limit);
@@ -85,7 +74,6 @@ btnClasses += "bg-[#1E3A8A] text-white border-[#1E3A8A] cursor-default";
 }
 
 pro();
-
 
 
 

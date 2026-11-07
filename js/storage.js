@@ -10,3 +10,11 @@ return  fetch("./data/data.json")
     console.log("error",error);
 });
 }
+export const getStorageItem=(key)=>{
+    const data=localStorage.getItem(key);
+    return data ? JSON.parse(data):null;
+
+};
+export const setStorageItem = (key, data) => {
+    localStorage.setItem(key, JSON.stringify(data));
+};
