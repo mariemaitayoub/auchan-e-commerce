@@ -7,16 +7,16 @@ async function pro() {
         return;
 
     data.forEach(element => {
-
+card.className='bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition duration-300 flex flex-col justify-between'
         // console.log(products.name);
         const card = document.createElement("div")
         card.innerHTML = `
 <img src='${element.image}' class="w-full h-48 object-cover">
 <div class="p-2 flex flex-col gap-3">
-<h3 class="text-lg font-bold text-gray-800 ">${element.name}<h3> 
-<span class="text-xl font-black text-red-600">${element.price} DH</span>
-<span>
-<button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 font-bold transition">Ajouter</button>
+<h3 class="text-lg font-bold text-gray-800 ">${element.name}</h3> 
+<span class="text-xl font-black text-[#F59E0B]">${element.price} DH</span>
+
+<button class="w-full bg-[#1E3A8A] text-white px-4 py-2 rounded-lg hover:bg-[#152960] font-bold transition mt-2 shadow-sm">
 </div>
 
 `
@@ -28,7 +28,7 @@ async function pro() {
 
 }
 
-console.log(pro());
+pro()
 
 
 
